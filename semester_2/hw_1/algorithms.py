@@ -2,7 +2,7 @@ import copy
 import random
 
 
-def quick_sort(unsorted):
+def quick_sort(unsorted: list[int]) -> list[int]:
     """ Быстрая сортировка """
     if len(unsorted) <= 1:
         return unsorted
@@ -15,7 +15,7 @@ def quick_sort(unsorted):
     return quick_sort(l_nums) + e_nums + quick_sort(b_nums)
 
 
-def selection_sort(unsorted):
+def selection_sort(unsorted: list[int]) -> list[int]:
     """ Сортировка выбором """
     nums = copy.copy(unsorted)
     for i in range(len(nums)):
@@ -27,7 +27,7 @@ def selection_sort(unsorted):
     return nums
 
 
-def bubble_sort(unsorted):
+def bubble_sort(unsorted: list[int]) -> list[int]:
     """ Пузырьковая сортировка """
     swap_bool = True
     nums = copy.copy(unsorted)
